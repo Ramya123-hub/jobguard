@@ -13,13 +13,10 @@ class JobInput(BaseModel):
 
 
 # Home page
+# Home page
 @app.get("/")
 def home():
-    return {
-        "project": "JobGuard",
-        "message": "Fake Internship & Job Alert Checker",
-        "status": "Backend running successfully"
-    }
+    return FileResponse("index.html")
 
 
 # Fake internship and job detection
